@@ -16,18 +16,18 @@ Tested on Debian 10/11, and Ubuntu 18.04/20.04
 sudo true
 ```
 
-### Download
+### download
 ```
-curl -sOL https://github.com/rjsocha/config-libpam-ssh-agent-auth/raw/master/config-libpam-ssh-agent-auth_1.11_all.deb
+curl -sOL https://github.com/rjsocha/config-libpam-ssh-agent-auth/raw/main/config-libpam-ssh-agent-auth_1.11_all.deb
 ```
 
-### Install
+### install
 ```
 sudo apt-get update -qq && sudo apt-get install -y ./config-libpam-ssh-agent-auth_1.11_all.deb
 sudo cp ~/.ssh/authorized_keys /etc/site/sudo/allow/$USER
 ```
 
-### Test
+### test
 ```
 sudo -K
 sudo tail /var/log/auth.log
