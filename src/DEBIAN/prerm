@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+PKG=config-libpam-ssh-agent-auth
+if [ "$1" = "remove" ]; then
+	if [ -L /etc/pam.d/sudo ]; then
+		rm /etc/pam.d/sudo
+	fi
+	dpkg-divert --quiet --remove --package ${PKG} --rename \
+		--divert /etc/site/sudo/pam/save/sudo /etc/pam.d/sudo
+	if [ -f /etc/site/sudo/pam/sudo ]; then
+		rm /etc/site/sudo/pam/sudo
+	fi
+fi
+exit 0

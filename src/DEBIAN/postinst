@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+PKG=config-libpam-ssh-agent-auth
+if [ "$1" = "configure" ]; then
+	if [ ! -f /etc/site/sudo/pam/sudo ]; then
+		sed '/^@include common-auth$/i @include sudo-ssh-agent-auth' /etc/pam.d/sudo | tee /etc/site/sudo/pam/sudo
+	fi
+	if ! fgrep -q sudo-ssh-agent-auth /etc/site/sudo/pam/sudo; then
+		echo "WARNING: configuration not modified"
+	else
+		dpkg-divert --quiet --add --package ${PKG} --rename \
+			--divert /etc/site/sudo/pam/save/sudo /etc/pam.d/sudo
+		if [ ! -e /etc/pam.d/sudo -o -L /etc/pam.d/sudo ]; then
+			ln -sf /etc/site/sudo/pam/sudo /etc/pam.d/sudo
+		fi
+	fi
+fi
+exit 0
