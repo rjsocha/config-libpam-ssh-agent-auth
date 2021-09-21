@@ -10,7 +10,7 @@ KB: https://wiki.debian.org/ConfigPackages
 
 ## Setup
 
-Tested on Debian 10/11, and Ubuntu 18.04/20.04 
+Tested on Debian 10/11 and Ubuntu 18.04/20.04 
 
 ### pre-cache user credentials
 
