@@ -1,5 +1,5 @@
 Package: config-libpam-ssh-agent-auth
-Version: 1.11
+Version: 1.12
 Architecture: all
 Maintainer: Robert Socha <socha@socha.it>
 Depends: libpam-ssh-agent-auth, sudo
