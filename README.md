@@ -17,17 +17,24 @@ sudo true
 ```
 
 ### download
+
 ```
 curl -sOL https://github.com/rjsocha/config-libpam-ssh-agent-auth/releases/download/1.12/config-libpam-ssh-agent-auth_1.12_all.deb
 ```
 
 ### install
+
 ```
-sudo apt-get update -qq && sudo apt-get install -y ./config-libpam-ssh-agent-auth_1.11_all.deb
+sudo apt-get update -qq
+sudo apt-get install -y ./config-libpam-ssh-agent-auth_1.12_all.deb
+```
+
+```
 sudo cp ~/.ssh/authorized_keys /etc/site/sudo/allow/$USER
 ```
 
 ### test
+
 ```
 sudo -K
 sudo tail /var/log/auth.log
