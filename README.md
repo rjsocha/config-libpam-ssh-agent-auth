@@ -18,7 +18,7 @@ sudo true
 
 ### download
 ```
-curl -sOL https://github.com/rjsocha/config-libpam-ssh-agent-auth/raw/main/config-libpam-ssh-agent-auth_1.11_all.deb
+curl -sOL https://github.com/rjsocha/config-libpam-ssh-agent-auth/releases/download/1.12/config-libpam-ssh-agent-auth_1.12_all.deb
 ```
 
 ### install
