@@ -6,6 +6,8 @@ This deb package install libpam-ssh-agent-auth (via dependency) and change confi
 
 You need to copy  user's public key(s) to /etc/site/sudo/allow/<USERNAME> after installation.
 
+KB: https://wiki.debian.org/ConfigPackages
+
 ## Setup
 
 Tested on Debian 10/11, and Ubuntu 18.04/20.04 
